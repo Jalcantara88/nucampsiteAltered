@@ -31,9 +31,36 @@
         </div>
     </header>
 
+    <!--Navbar expands at small, dark setting, sticks to top-->
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <!--container for nav elements-->
+        <div class="container">
+            <!--Button to expand navbar when sm or smaller, link to data target-->
+            <button class="navbar-toggler ml-auto" type="button"
+            data-toggle="collapse" data-target="#nucampNavbar">
+                <!--image for collapsed navbar button-->
+                <span class ="navbar-toggler-icon"></span>
+            </button>
+            <!--navbar elements holder-->
+            <div class="collapse navbar-collapse" id="nucampNavbar">
+                <!--actual navbar elements, id for data target-->
+                <ul class="navbar-nav ">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
         <div class="row">
             <div class="col-12">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">About Us</li>
+                </ol>
                <h2>About Us</h2>
                <hr />
             </div>
