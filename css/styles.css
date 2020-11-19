@@ -10,30 +10,46 @@ h2 {
     color: blue;
 }
 
-header h2 {
-    color: lightgray;
+.card-header h2{
+    color: white;
+}
+
+.cardHeader{
+    background-color: rgb(156, 129, 219);
+}
+
+#navbar{
+    background-color: rgb(156, 230, 233);
 }
 
 .siteFooter{
-    background-image: linear-gradient(pink, white);
+    background-color: rgb(71, 61, 73);
     padding: 20px 0;
 }
 
-.jumbotron{
+#nucampHeader{
     padding: 30px;
-    background-image: linear-gradient(to right, lightblue, purple, red);
-    color: white;
+    background-image: linear-gradient(to bottom, rgb(187, 145, 255),rgb(255, 210, 210));
+    color: rgb(255, 255, 255);
     margin: 0px;
+    font-size: 3em;
+}
+
+#siteTitle{
+    font-size: 1.6em;
 }
 
 .row-content{
-    padding: 50px 0;
-    border-bottom: 1px ridge;
+    padding-top: 40px;
     min-height: 200px;
 }
 
-.navbar{
-    background-color: lightcoral;
+.row-content .card-body{
+    background-color: rgb(200, 231, 241);
+}
+
+.row .col{
+    border: none;
 }
 
 .tab-content{
@@ -43,9 +59,49 @@ header h2 {
 }
 
 .carousel-caption {
-    background-color: rgba(0, 0, 0, .5)
+    background-color: rgba(0, 20, 17, 0.5)
 }
+.carousel-caption h3{
+     font-size: 2.5em;
+ }
 
-.carousel {
-    border: solid lightblue;
-}
+.carouselHeader{
+     color: rgb(255, 163, 179);
+ }
+
+.pinkLabel{
+     background-color: rgb(255, 163, 179);
+     color: white;
+     border-radius: 5px; 
+ }
+
+#rowPadding{
+     padding-bottom: 40px;
+ }
+
+.borderNone{
+    border: none;
+    background-color: rgb(221, 180, 255);
+    padding-top: 10px;
+ }
+
+ .roundedEdge{
+     border-radius: 10px;
+ }
+
+ .pageTitle{
+     color: white;
+    background-color: teal;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+ }
+
+ .noBorder{
+     border: none;
+ }
+
+ .bgLight{
+     background-color: lightblue;
+ }
+

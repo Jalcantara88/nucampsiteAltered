@@ -27,7 +27,7 @@
 
 <body>
 
-    <header class="jumbotron jumbotron-fluid">
+    <header class="jumbotron jumbotron-fluid" id="nucampHeader">
         <div class="container">
             <div class="row">
                 <!--logo jumbotron-->
@@ -37,29 +37,42 @@
                     </a>
                 </div>
                 <div class="col">
-                    <h1>NuCamp</h1>
-                    <h2>a better way to camp</h2>
+                    <h1 id="siteTitle">NuCamp</h1>
+                    <h2 class="text-info">a better way to camp</h2>
+                </div>
+                <div class="col-md-4 col-xl-2 col-12 mt-4">
+                    <a class="text-nowrap" href="#reserveForm"><button class="btn btn-info btn-lg" data-toggle="tooltip" data-placement="bottom" data-html="true" title="or call us at <br /><strong> 1-800-555-1234</strong>">Reseve Campsite</button></a>
                 </div>
             </div>
+            
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+    <!--Navbar expands at small, dark setting, sticks to top-->
+    <nav class="navbar navbar-expand-sm navbar-light sticky-top" id="navbar">
+        <!--container for nav elements-->
         <div class="container">
-            <!--logo-->
-            <a class="navbar-brand" href="#">
-                <img src="img/logo.png" height="30px" width="30px"/>
-            </a>
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
-                <span class="navbar-toggler-icon"></span>
+            
+            <!--Button to expand navbar when sm or smaller, link to data target-->
+            <button class="navbar-toggler" type="button"
+            data-toggle="collapse" data-target="#nucampNavbar">
+                <!--image for collapsed navbar button-->
+                <span class ="navbar-toggler-icon"></span>
             </button>
+            <!--navbar elements holder-->
             <div class="collapse navbar-collapse" id="nucampNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i> About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Sites</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
+                <!--actual navbar elements, id for data target-->
+                <ul class="navbar-nav ">
+                    <li class="nav-item active"><a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i>Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i>About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i>Sites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-address-card fa-lg"></i>Contact</a></li>
                 </ul>
+                <span class="navbar-text ml-auto">
+                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                        <i class="fa fa-sign-in"></i> Login
+                    </a>
+                </span>
             </div>
         </div>
     </nav>
@@ -71,48 +84,58 @@
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item active">Contact</li>
                 </ol>
-                <h2>Contact Us</h2>
+                <h2 class="text-center pageTitle">Contact Us</h2>
                 <hr />
             </div>
         </div>
 
-        <div class="row row-content align-items-center">
-            <div class="col-sm-4">
-                <h5>Our Address</h5>
-                <address>
-                    1 Nucamp Way<br />
-                    Seattle, WA 98001<br />
-                    U.S.A.
-                </address>
-            </div>
-            <div class="col">
-				<a role="button" class="btn btn-link" href="tel:+2065551234"><i class="fa fa-phone"></i> 1-206-555-1234</a><br>
-            	<a role="button" class="btn btn-link" href="mailto:campsites@nucamp.com"></a><i class="fa fa-envelope-o"></i> campsites@nucamp.co
-            </div>
+        <div class="row">
+                
+                    <div class="card col-6 noBorder">
+                        <h4 class="card-header bg-primary text-center text-white">Our Address</h5>
+                        <div class="card-body text-primary text-center bgLight">
+                            <address>
+                                1 Nucamp Way<br />
+                                Seattle, WA 98001<br />
+                                U.S.A.
+                            </address>
+                        </div>
+                    </div>
+                    <div class="card col-6 noBorder">
+                        <h4 class="card-header bg-primary text-center text-white">Phone & Email</h4>
+                        <div class="card-body text-center bgLight">
+                            <a role="button" class="btn btn-link " href="tel:+2065551234"><i class="fa fa-phone"></i> 1-206-555-1234</a><br>
+                            <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.com"><i class="fa fa-envelope-o"></i> campsites@nucamp.co</a>
+                        </div>
+                        
+                    </div>
+                
+                
+            
         </div>
 
         <div class="row row-content">
+            <div class="card col-md-10 noBorder mx-auto">
             <div class="col-12">
-                <h2>Send us your Feedback</h2>
-                <hr />
+                    <h2 class="carouselHeader">Send us your Feedback</h2>
             </div>
             <!--contactForm-->
-            <div class="col-md-10">
+            
                 <form>
                     <div class="row form-group">
-                        <label for="firstName" class="col-md-2 col-form-label">First Name</label>
+                        <label for="firstName" class="col-md-2 col-form-label pinkLabel">First Name</label>
                         <div class="col-md-10">
                             <input id="firstName" class="form-control" type="text" name="firstName" placeholder="First Name"/>
                         </div>
                     </div>
                     <div class="row form-group">
-                        <label for="lastName" class="col-md-2 col-form-label">Last Name</label>
+                        <label for="lastName" class="col-md-2 col-form-label pinkLabel">Last Name</label>
                         <div class="col-md-10">
                             <input id="lastName" class="form-control" type="text" name="lastName" placeholder="Last Name"/>
                         </div>
                     </div>
                     <div class="row form-group">
-                        <label for="areaCode" class="col-md-2 col-form-label">Contact Tel.</label>
+                        <label for="areaCode" class="col-md-2 col-form-label pinkLabel">Contact Tel.</label>
                         <div class="col-5 col-md-3">
                             <input id="areaCode" class="form-control" type="tel" name="areaCode" placeholder="Area Code"/>
                         </div>
@@ -121,7 +144,7 @@
                         </div>
                     </div>
                     <div class="row form-group">
-                        <label for="email" class="col-md-2 col-form-label">Email</label>
+                        <label for="email" class="col-md-2 col-form-label pinkLabel">Email</label>
                         <div class="col-md-10">
                             <input for="email" class="form-control" type="email" name="email" placeholder="Email"/>
                         </div>
@@ -140,15 +163,15 @@
                         </div>
                     </div>
                     <div class="row form-group">
-                        <label for="yourFeedback" class="col-md-2 col-form-label">Your Feedback</label>
+                        <label for="yourFeedback" class="col-md-2 col-form-label pinkLabel">Your Feedback</label>
                         <div class="col-md-10">
                             <textarea id="yourFeedback" class="form-control" name="feedback" rows="8"></textarea>
                         </div>
                     </div>
                     <!--submit-->
                     <div class="row">
-                        <div class="offset-md-2 col-md-10">
-                            <button class="btn btn-primary" type="submit">Send Feedback</button>
+                        <div class="col-12">
+                            <button class="btn pinkLabel offset-5" type="submit">Send Feedback</button>
                         </div>
                     </div>
                 </form>
@@ -158,7 +181,7 @@
     </div>
 
     <footer class="siteFooter">
-        <div class="container">
+        <div class="container tex-white">
             <div class="row">
                 <div class="col-4 col-sm-2 offset-1">
                     <h5>Links</h5>
